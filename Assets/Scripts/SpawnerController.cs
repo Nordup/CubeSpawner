@@ -6,7 +6,7 @@ public class SpawnerController : MonoBehaviour
     
     public void SetSpawnSpeed(string line)
     {
-        if (int.TryParse(line, out var speed))
+        if (float.TryParse(line, out var speed))
         {
             cubeSpawner.spawnSpeed = speed;
         }
@@ -14,7 +14,7 @@ public class SpawnerController : MonoBehaviour
     
     public void SetCubeSpeed(string line)
     {
-        if (int.TryParse(line, out var speed))
+        if (float.TryParse(line, out var speed))
         {
             cubeSpawner.cubeSpeed = speed;
         }
@@ -22,7 +22,7 @@ public class SpawnerController : MonoBehaviour
     
     public void SetCubeDistance(string line)
     {
-        if (int.TryParse(line, out var distance))
+        if (float.TryParse(line, out var distance))
         {
             cubeSpawner.cubeDistance = distance;
         }
