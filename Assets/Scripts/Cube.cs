@@ -16,7 +16,7 @@ public class Cube : MonoBehaviour
     private void Update()
     {
         if (distance < (transform.position - _startPos).magnitude) DestroySelf();
-        transform.Translate(Time.deltaTime * speed * direction);
+        transform.Translate(Time.deltaTime * speed * direction, Space.World);
     }
     
     private void DestroySelf()
