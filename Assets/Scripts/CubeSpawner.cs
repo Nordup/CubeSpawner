@@ -3,9 +3,9 @@ using UnityEngine;
 public class CubeSpawner : MonoBehaviour
 {
     public Cube cubePrefab;
-    public float cubeSpeed;
-    public float cubeDistance;
-    public float spawnSpeed;
+    [HideInInspector] public float cubeSpeed;
+    [HideInInspector] public float cubeDistance;
+    [HideInInspector] public float spawnSpeed;
     
     private float _timePast;
     
