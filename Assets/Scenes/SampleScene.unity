@@ -367,6 +367,7 @@ GameObject:
   - component: {fileID: 202595017}
   - component: {fileID: 202595016}
   - component: {fileID: 202595015}
+  - component: {fileID: 202595018}
   m_Layer: 5
   m_Name: Speed IF
   m_TagString: Untagged
@@ -457,9 +458,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 526031997}
-        m_TargetAssemblyTypeName: SpawnerController, Assembly-CSharp
-        m_MethodName: SetCubeSpeed
+      - m_Target: {fileID: 202595018}
+        m_TargetAssemblyTypeName: NumberValidator, Assembly-CSharp
+        m_MethodName: Validate
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -543,6 +544,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202595013}
   m_CullTransparentMesh: 1
+--- !u!114 &202595018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202595013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81100787ece94cf43b8e922b27b052ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onValid:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 526031997}
+        m_TargetAssemblyTypeName: SpawnerController, Assembly-CSharp
+        m_MethodName: SetCubeSpeed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &212953797
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +1013,7 @@ GameObject:
   - component: {fileID: 410549995}
   - component: {fileID: 410549994}
   - component: {fileID: 410549993}
+  - component: {fileID: 410549996}
   m_Layer: 5
   m_Name: Distance IF
   m_TagString: Untagged
@@ -1075,9 +1104,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 526031997}
-        m_TargetAssemblyTypeName: SpawnerController, Assembly-CSharp
-        m_MethodName: SetCubeDistance
+      - m_Target: {fileID: 410549996}
+        m_TargetAssemblyTypeName: NumberValidator, Assembly-CSharp
+        m_MethodName: Validate
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1161,6 +1190,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410549991}
   m_CullTransparentMesh: 1
+--- !u!114 &410549996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410549991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81100787ece94cf43b8e922b27b052ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onValid:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 526031997}
+        m_TargetAssemblyTypeName: SpawnerController, Assembly-CSharp
+        m_MethodName: SetCubeDistance
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &526031996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,7 +1999,6 @@ GameObject:
   - component: {fileID: 831104977}
   - component: {fileID: 831104979}
   - component: {fileID: 831104978}
-  - component: {fileID: 831104980}
   - component: {fileID: 831104981}
   m_Layer: 5
   m_Name: Panel
@@ -2018,18 +2073,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831104976}
   m_CullTransparentMesh: 1
---- !u!114 &831104980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831104976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 454b4d21d9aaa744b8d3de16a6ca68ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &831104981
 Animator:
   serializedVersion: 4
@@ -3293,6 +3336,7 @@ GameObject:
   - component: {fileID: 1974567282}
   - component: {fileID: 1974567281}
   - component: {fileID: 1974567280}
+  - component: {fileID: 1974567283}
   m_Layer: 5
   m_Name: SpawnSpeed IF
   m_TagString: Untagged
@@ -3383,9 +3427,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 526031997}
-        m_TargetAssemblyTypeName: SpawnerController, Assembly-CSharp
-        m_MethodName: SetSpawnSpeed
+      - m_Target: {fileID: 1974567283}
+        m_TargetAssemblyTypeName: NumberValidator, Assembly-CSharp
+        m_MethodName: Validate
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3469,6 +3513,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974567278}
   m_CullTransparentMesh: 1
+--- !u!114 &1974567283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974567278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81100787ece94cf43b8e922b27b052ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onValid:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 526031997}
+        m_TargetAssemblyTypeName: SpawnerController, Assembly-CSharp
+        m_MethodName: SetSpawnSpeed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2143289259
 GameObject:
   m_ObjectHideFlags: 0

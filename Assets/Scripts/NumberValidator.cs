@@ -1,18 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NumberValidator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public UnityEvent<string> onValid;
+    
+    private TMP_InputField _tmpInputField;
+
+    private void Start()
     {
-        
+        _tmpInputField = GetComponent<TMP_InputField>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Validate(string line)
     {
+        if (line.Equals("-"))
+        {
+            _tmpInputField.text = "1";
+            line = "1";
+        }
+        else
+        {
+            var number = float.Parse(line);
+            if (number <= 0)
+            {
+                _tmpInputField.text = "1";
+                line = "1";
+            }
+        }
         
+        onValid.Invoke(line);
     }
 }
